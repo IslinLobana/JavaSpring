@@ -27,13 +27,14 @@ public class TodosController {
         getTodos().add(new Todo("Küche aufräumen", "Jordan"));
     }
 
+    
     @GetMapping("/todos")
     public String todos(@RequestParam(name="activePage", required = false, defaultValue = "todos") String activePage, Model model){
         model.addAttribute("activePage", "todos");
         model.addAttribute("todos", getTodos());
         return "index.html";
     }
-
+    
     @RequestMapping("/deltodo")
     public String deltodo(@RequestParam(name="id", required = true, defaultValue = "null") int id, @RequestParam(name="activePage", required = false, defaultValue = "todos") String activePage, Model model){
         getTodos().remove(id);
