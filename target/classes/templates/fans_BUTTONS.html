@@ -1,0 +1,14 @@
+<h2 th:text="'Deine Fans (' + ${#arrays.length(fans)} + ')'"></h2>
+<hr>
+<span th:each="fans, fansStat: ${fans}">
+    <a class="btn btn-secondary mt-2" th:text="${fans}" th:href="@{/delfans(id=${fansStat.index})}"></a>
+</span>
+<hr>
+<form th:action="@{/addfans}">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Neuer Fan" th:name="FansVorname">
+        <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit" id="button-addon2">Speichern</button>
+        </div>
+    </div>
+</form>

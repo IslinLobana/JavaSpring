@@ -1,0 +1,14 @@
+<h2>Trainer bearbeiten</h2>
+<hr>
+<form th:action="@{/updatetrainer(id=${trainerid})}">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" th:value="${trainer.getVorname()}" th:name="trainerVorname" >
+        <input type="text" class="form-control" th:value="${trainer.getNachname()}" th:name="trainerNachname" >
+        <input type="text" class="form-control" th:value="${trainer.getAlter()}" th:name="trainerAlter" >
+        <input type="text" class="form-control" th:value="${trainer.getVerein()}" th:name="trainerVerein" >
+        <input type="number" class="form-control" th:value="${trainerid}" th:name="trainerId" style="display: none;" >
+        <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit" id="button-addon2">Aktualisieren</button>
+        </div>
+    </div>
+</form>

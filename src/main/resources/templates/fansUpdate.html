@@ -1,0 +1,14 @@
+<h2>Fan bearbeiten</h2>
+<hr>
+<form th:action="@{/updatefans(id=${fansid})}">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" th:value="${fans.getVorname()}" th:name="fansVorname" >
+        <input type="text" class="form-control" th:value="${fans.getNachname()}" th:name="fansNachname" >
+        <input type="text" class="form-control" th:value="${fans.getGeschlecht()}" th:name="fansGeschlecht" >
+        <input type="text" class="form-control" th:value="${fans.getVerein()}" th:name="fansVerein" >
+        <input type="number" class="form-control" th:value="${fansid}" th:name="fansId" style="display: none;" >
+        <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit" id="button-addon2">Aktualisieren</button>
+        </div>
+    </div>
+</form>

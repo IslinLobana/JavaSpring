@@ -1,0 +1,13 @@
+<h2>Stadion bearbeiten</h2>
+<hr>
+<form th:action="@{/updatestadion(id=${stadionid})}">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" th:value="${stadion.getName()}" th:name="stadionName" >
+        <input type="text" class="form-control" th:value="${stadion.getPlaetze()}" th:name="stadionPlaetze" >
+        <input type="text" class="form-control" th:value="${stadion.getHeimverein()}" th:name="stadionHeimverein" >
+        <input type="number" class="form-control" th:value="${stadionid}" th:name="stadionId" style="display: none;" >
+        <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit" id="button-addon2">Aktualisieren</button>
+        </div>
+    </div>
+</form>

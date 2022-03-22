@@ -47,6 +47,40 @@
                 <a class="nav-link" th:href="@{/?activePage=impressum}">Impressum</a>
             </li>
 
+            <li th:if="${activePage == 'spieler'}" class="nav-item active">
+                <a class="nav-link" th:href="@{/spieler}">Spieler</a>
+            </li>
+            <li th:unless="${activePage == 'spieler'}" class="nav-item">
+                <a class="nav-link" th:href="@{/spieler}">Spieler</a>
+            </li>
+
+            <li th:if="${activePage == 'stadion'}" class="nav-item active">
+                <a class="nav-link" th:href="@{/stadion}">Stadion</a>
+            </li>
+            <li th:unless="${activePage == 'stadion'}" class="nav-item">
+                <a class="nav-link" th:href="@{/stadion}">Stadion</a>
+            </li>
+
+            <li th:if="${activePage == 'trikot'}" class="nav-item active">
+                <a class="nav-link" th:href="@{/trikot}">Trikot</a>
+            </li>
+            <li th:unless="${activePage == 'trikot'}" class="nav-item">
+                <a class="nav-link" th:href="@{/trikot}">Trikot</a>
+            </li>
+
+            <li th:if="${activePage == 'trainer'}" class="nav-item active">
+                <a class="nav-link" th:href="@{/trainer}">Trainer</a>
+            </li>
+            <li th:unless="${activePage == 'trainer'}" class="nav-item">
+                <a class="nav-link" th:href="@{/trainer}">Trainer</a>
+            </li>
+
+            <li th:if="${activePage == 'fans'}" class="nav-item active">
+                <a class="nav-link" th:href="@{/fans}">Fans</a>
+            </li>
+            <li th:unless="${activePage == 'fans'}" class="nav-item">
+                <a class="nav-link" th:href="@{/fans}">Fans</a>
+            </li>
             
 
 

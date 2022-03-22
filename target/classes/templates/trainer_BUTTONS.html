@@ -1,0 +1,14 @@
+<h2 th:text="'Deine trainer (' + ${#arrays.length(trainer)} + ')'"></h2>
+<hr>
+<span th:each="trainer, trainerStat: ${trainer}">
+    <a class="btn btn-secondary mt-2" th:text="${trainer}" th:href="@{/deltrainer(id=${trainerStat.index})}"></a>
+</span>
+<hr>
+<form th:action="@{/addtrainer}">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Neuer trainer" th:name="trainerVorname">
+        <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit" id="button-addon2">Speichern</button>
+        </div>
+    </div>
+</form>

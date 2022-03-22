@@ -1,0 +1,14 @@
+<h2 th:text="'Deine trikot (' + ${#arrays.length(trikot)} + ')'"></h2>
+<hr>
+<span th:each="trikot, trikotStat: ${trikot}">
+    <a class="btn btn-secondary mt-2" th:text="${trikot}" th:href="@{/deltrikot(id=${trikotStat.index})}"></a>
+</span>
+<hr>
+<form th:action="@{/addtrikot}">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Neuer trikot" th:name="trikotVorname">
+        <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit" id="button-addon2">Speichern</button>
+        </div>
+    </div>
+</form>
