@@ -2,15 +2,15 @@ package com.example.ToDo.models;
 
 public class Spieler extends Person{
 
-    String alter;
+    int alter;
     String verein;
 
-    public Spieler(String vorname, String nachname, String alter, String verein){
+    public Spieler(String vorname, String nachname, int alter, String verein){
         super(vorname, nachname);
         setAlter(alter);
         setVerein(verein);
     }
-    public void setAlter(String alter) {
+    public void setAlter(int alter) {
         this.alter = alter;
     }
 
@@ -18,7 +18,7 @@ public class Spieler extends Person{
      public void setVerein(String verein) {
          this.verein = verein;
      }
-     public String getAlter() {
+     public int getAlter() {
          return alter;
      }
      public String getVerein() {

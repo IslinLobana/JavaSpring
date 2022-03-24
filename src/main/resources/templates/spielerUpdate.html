@@ -2,11 +2,11 @@
 <hr>
 <form th:action="@{/updatespieler(id=${spielerid})}">
     <div class="input-group mb-3">
-        <input type="text" class="form-control" th:value="${spieler.getVorname()}" th:name="spielerVorname" >
-        <input type="text" class="form-control" th:value="${spieler.getNachname()}" th:name="spielerNachname" >
-        <input type="text" class="form-control" th:value="${spieler.getAlter()}" th:name="spielerAlter" >
-        <input type="text" class="form-control" th:value="${spieler.getVerein()}" th:name="spielerVerein" >
-        <input type="number" class="form-control" th:value="${spielerid}" th:name="spielerId" style="display: none;" >
+        <input type="text" class="form-control" th:value="${spieler.getVorname()}" th:name="SpielerVorname" >
+        <input type="text" class="form-control" th:value="${spieler.getNachname()}" th:name="SpielerNachname" >
+        <input type="text" class="form-control" th:value="${spieler.getAlter()}" th:name="SpielerAlter" >
+        <input type="text" class="form-control" th:value="${spieler.getVerein()}" th:name="SpielerVerein" >
+        <input type="number" class="form-control" th:value="${spielerid}" th:name="SpielerId" style="display: none;" >
         <div class="input-group-append">
             <button class="btn btn-secondary" type="submit" id="button-addon2">Aktualisieren</button>
         </div>

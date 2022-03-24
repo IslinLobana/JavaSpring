@@ -23,8 +23,8 @@ public class SpielerController {
     }
 
     private void createDemoData(){
-        getSpieler().add(new Spieler("Christiano", "Orlando", "57", "ManU"));
-        getSpieler().add(new Spieler("Lionel", "Mess-Eye", "43", "PSG"));
+        getSpieler().add(new Spieler("Christiano", "Orlando", 57, "ManU"));
+        getSpieler().add(new Spieler("Lionel", "Mess-Eye", 43, "PSG"));
     }
 
     @GetMapping("/spieler")
@@ -50,7 +50,7 @@ public class SpielerController {
     }
     
     @RequestMapping("/updatespieler")
-    public String updateSpieler(@RequestParam(name="SpielerId", required = true, defaultValue = "null") int spielerId, @RequestParam(name="SpielerVorname", required = true, defaultValue = "null") String SpielerVorname, @RequestParam(name="SpielerNachname", required = true, defaultValue = "null") String SpielerNachname, @RequestParam(name="SpielerAlter", required = true, defaultValue = "null") String SpielerAlter, @RequestParam(name="SpielerVerein", required = true, defaultValue = "null") String SpielerVerein,@RequestParam(name="activePage", required = false, defaultValue = "spieler") String activePage, Model model){
+    public String updateSpieler(@RequestParam(name="SpielerId", required = true, defaultValue = "null") int spielerId, @RequestParam(name="SpielerVorname", required = true, defaultValue = "null") String SpielerVorname, @RequestParam(name="SpielerNachname", required = true, defaultValue = "null") String SpielerNachname, @RequestParam(name="SpielerAlter", required = true, defaultValue = "0") int SpielerAlter, @RequestParam(name="SpielerVerein", required = true, defaultValue = "null") String SpielerVerein,@RequestParam(name="activePage", required = false, defaultValue = "spieler") String activePage, Model model){
         getSpieler().get(spielerId).setVorname(SpielerVorname);
         getSpieler().get(spielerId).setNachname(SpielerNachname);
         getSpieler().get(spielerId).setAlter(SpielerAlter);
@@ -59,7 +59,7 @@ public class SpielerController {
     }
     
     @RequestMapping("/addspieler")
-    public String addSpieler(@RequestParam(name="SpielerVorname", required = true, defaultValue = "null") String spielerVorname,@RequestParam(name="SpielerNachname", required = true, defaultValue = "null") String spielerNachname, @RequestParam(name="SpielerAlter", required = true, defaultValue = "null") String spielerAlter,@RequestParam(name="SpielerVerein", required = false, defaultValue = "null") String spielerVerein, @RequestParam(name="activePage", required = true, defaultValue = "spieler") String activePage, Model model){
+    public String addSpieler(@RequestParam(name="SpielerVorname", required = true, defaultValue = "null") String spielerVorname,@RequestParam(name="SpielerNachname", required = true, defaultValue = "null") String spielerNachname, @RequestParam(name="SpielerAlter", required = true, defaultValue = "null") int spielerAlter,@RequestParam(name="SpielerVerein", required = false, defaultValue = "null") String spielerVerein, @RequestParam(name="activePage", required = true, defaultValue = "spieler") String activePage, Model model){
         getSpieler().add(new Spieler(spielerVorname, spielerNachname, spielerAlter, spielerVerein));
         return "redirect:/spieler";
     }
