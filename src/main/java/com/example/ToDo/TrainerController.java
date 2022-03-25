@@ -23,8 +23,8 @@ public class TrainerController {
     }
 
     private void createDemoData(){
-        getTrainer().add(new Trainer("Christiano", "Orlando", "57", "60"));
-        getTrainer().add(new Trainer("Lionel", "Mess-Eye", "43", "50"));
+        getTrainer().add(new Trainer("Jürgen", "Klopp", "90", "Liverpool"));
+        getTrainer().add(new Trainer("Carlo", "Ancheloti", "103", "Real Madrid"));
     }
 
     @GetMapping("/trainer")

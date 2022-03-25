@@ -23,8 +23,8 @@ public class TrikotController {
     }
 
     private void createDemoData(){
-        getTrikot().add(new Trikot("Christiano", "Orlando", "57", "60"));
-        getTrikot().add(new Trikot("Lionel", "Mess-Eye", "43", "50"));
+        getTrikot().add(new Trikot("Christiano", "Orlando", "7", "200"));
+        getTrikot().add(new Trikot("Lionel", "Mess-Eye", "10", "200"));
     }
 
     @GetMapping("/trikot")

@@ -37,7 +37,10 @@
 <hr>
 <form th:action="@{/addspieler}">
     <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Neuer Spieler" th:name="SpielerVorname" >
+        <input type="text" class="form-control" placeholder="Neuer Vorname" th:name="SpielerVorname" >
+        <input type="text" class="form-control" placeholder="Neuer Nachname" th:name="SpielerNachname" >
+        <input type="text" class="form-control" placeholder="Alter" th:name="SpielerAlter" >
+        <input type="text" class="form-control" placeholder="Verein" th:name="SpielerVerein" >
         <div class="input-group-append">
             <button class="btn btn-secondary" type="submit" id="button-addon2">Speichern</button>
         </div>

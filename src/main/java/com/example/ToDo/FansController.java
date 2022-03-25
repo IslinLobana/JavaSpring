@@ -23,8 +23,9 @@ public class FansController {
     }
 
     private void createDemoData(){
-        getFans().add(new Fans("Christiano", "Orlando", "57", "ManU"));
-        getFans().add(new Fans("Lionel", "Mess-Eye", "43", "PSG"));
+        getFans().add(new Fans("Dummer", "Mensch", "Männlich", "HSV"));
+        getFans().add(new Fans("Selena", "Gomez", "Weiblich", "Liverpool"));
+        getFans().add(new Fans("Ronny", "Dinckel", "Divers", "Rostdock"));
     }
 
     @GetMapping("/fans")
