@@ -23,8 +23,8 @@ public class StadionController {
     }
 
     private void createDemoData(){
-        getStadion().add(new Stadion("Christiano", "Orlando", "57"));
-        getStadion().add(new Stadion("Lionel", "Mess-Eye", "43"));
+        getStadion().add(new Stadion("Bernabeo", "80000", "Real Madrid"));
+        getStadion().add(new Stadion("Anfield", "60000", "Liverpool"));
     }
 
     @GetMapping("/stadion")

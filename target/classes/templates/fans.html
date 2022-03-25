@@ -6,7 +6,7 @@
             <td>#</td>
             <td>Vorname</td>
             <td>Nachname</td>
-            <td>getGeschlecht</td>
+            <td>Geschlecht</td>
             <td>Verein</td>
             <td>&nbsp;</td>
         </tr>
@@ -35,12 +35,12 @@
     </tbody>
 </table>
 <hr>
-<form th:action="@{/addfans}">
+<form th:action="@{/addfans}"> 
     <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Neuer Fans" th:name="FansVorname" >
-        <input type="text" class="form-control" placeholder="Neuer Fans" th:name="FansNachname" >
-        <input type="text" class="form-control" placeholder="Neuer Fans" th:name="FansGeschlecht" >
-        <input type="text" class="form-control" placeholder="Neuer Fans" th:name="FansVerein" >
+        <input type="text" class="form-control" placeholder="Neuer Vorname" th:name="FansVorname">
+        <input type="text" class="form-control" placeholder="Neuer Nachname" th:name="FansNachname">
+        <input type="text" class="form-control" placeholder="Geschlecht" th:name="FansGeschlecht">
+        <input type="text" class="form-control" placeholder="Verein" th:name="FansVerein">
         <div class="input-group-append">
             <button class="btn btn-secondary" type="submit" id="button-addon2">Speichern</button>
         </div>
