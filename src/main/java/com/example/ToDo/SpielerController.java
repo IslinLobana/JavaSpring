@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class SpielerController {
     
     ArrayList<Spieler> spieler;
-    ArrayList<Vereine> vereine;
     
 
     public SpielerController(){
         setSpieler(new ArrayList<Spieler>());
-        setVereine(new ArrayList<Vereine>());
+        
+
         createDemoData();
     }
 
@@ -75,13 +75,6 @@ public class SpielerController {
         return spieler;
     }
 
-    public ArrayList<Vereine> getVereine() {
-        return vereine;
-    }
-
-    public void setVereine(ArrayList<Vereine> vereine) {
-        this.vereine = vereine;
-    }
-
+    
     
 }
